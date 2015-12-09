@@ -25,5 +25,5 @@ fi
 $APP_ROOT/varnish/sbin/varnishd -C -f $APP_ROOT/varnish/etc/varnish/config.vcl 2>&1
 
 # TODO, Make MEMORY_LIMIT adjustable, this now comes from CF itself
-$APP_ROOT/varnish/sbin/varnishd -n /home/vcap/tmp/varnish -F -f $APP_ROOT/varnish/etc/varnish/config.vcl -a 0.0.0.0:$VCAP_APP_PORT -t 120 -w 50,1000,120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768 2>&1
+$APP_ROOT/varnish/sbin/varnishd -d -n /home/vcap/tmp/varnish -F -f $APP_ROOT/varnish/etc/varnish/config.vcl -a 0.0.0.0:$VCAP_APP_PORT -t 120 -w 50,1000,120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768 2>&1
 # ------------------------------------------------------------------------------------------------
