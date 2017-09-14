@@ -57,6 +57,8 @@ fi
 
 # check varnish config
 
+cat $HOME/app/varnish/etc/varnish/default.vcl
+
 $HOME/app/varnish/sbin/varnishd -C -f $HOME/app/varnish/etc/varnish/default.vcl 2>&1
 
 # TODO, Make MEMORY_LIMIT adjustable, this now comes from CF itself
