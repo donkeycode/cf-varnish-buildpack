@@ -33,7 +33,7 @@ status "Copying config files into etc/varnish/"
 mkdir -p varnish/etc/varnish/
 cp -r $build_dir/etc/* varnish/etc/varnish/
 
-cat > "$BUILD_DIR/boot.sh" <<EOF
+cat > "$build_dir/boot.sh" <<EOF
 # ------------------------------------------------------------------------------------------------
 # Copyright 2013 Jordon Bedwell.
 # Apache License.
