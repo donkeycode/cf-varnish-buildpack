@@ -48,7 +48,7 @@ cat > "$build_dir/boot.sh" <<EOF
 # and  limitations under the License.
 # ------------------------------------------------------------------------------------------------
 
-export APP_ROOT=$HOME
+export APP_ROOT=/home/vcap/app
 export LD_LIBRARY_PATH=$APP_ROOT/varnish/lib:$LD_LIBRARY_PATH
 
 
