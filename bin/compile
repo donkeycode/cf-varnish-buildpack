@@ -50,6 +50,9 @@ cat > "$build_dir/boot.sh" <<EOF
 
 export LD_LIBRARY_PATH=$HOME/varnish/lib:$LD_LIBRARY_PATH
 
+if [ -z "$VARNISH_MEMORY_LIMIT" ]; then
+    VARNISH_MEMORY_LIMIT="256m"
+fi
 
 if [ -z "$VARNISH_MEMORY_LIMIT" ]; then
     VARNISH_MEMORY_LIMIT=$MEMORY_LIMIT
