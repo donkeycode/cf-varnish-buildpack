@@ -65,8 +65,8 @@ mkdir -p $HOME/app/tmp/varnish
 chmod -R 777 $HOME/app/tmp/varnish
 
 # TODO, Make MEMORY_LIMIT adjustable, this now comes from CF itself
-echo "$HOME/app/varnish/sbin/varnishd -n $HOME/app/tmp/varnish -F -f $HOME/app/etc/varnish/default.vcl -a 0.0.0.0:$PORT -t 120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768"
-exec $HOME/app/varnish/sbin/varnishd -n $HOME/app/tmp/varnish -F -f $HOME/app/etc/varnish/default.vcl -a 0.0.0.0:$PORT -t 120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768 2>&1
+echo "$HOME/app/varnish/sbin/varnishd -n $HOME/app/tmp/varnish -F -f $HOME/app/etc/varnish/default.vcl -a 0.0.0.0:8080 -t 120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768"
+exec $HOME/app/varnish/sbin/varnishd -n $HOME/app/tmp/varnish -F -f $HOME/app/etc/varnish/default.vcl -a 0.0.0.0:8080 -t 120 -s malloc,$VARNISH_MEMORY_LIMIT -T 127.0.0.1:6082 -p http_resp_hdr_len=32768 2>&1
 # ------------------------------------------------------------------------------------------------
 EOF
 
