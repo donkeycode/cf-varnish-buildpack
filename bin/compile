@@ -59,7 +59,7 @@ fi
 
 cat $HOME/app/etc/varnish/default.vcl
 
-$HOME/app/varnish/sbin/varnishd -C -f $HOME/app/etc/varnish/default.vcl 2>&1
+#  $HOME/app/varnish/sbin/varnishd -C -f $HOME/app/etc/varnish/default.vcl 2>&1
 
 mkdir -p $HOME/app/tmp/varnish
 chmod -R 777 $HOME/app/tmp/varnish
