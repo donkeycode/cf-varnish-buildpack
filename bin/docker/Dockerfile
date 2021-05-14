@@ -3,7 +3,7 @@
 # for PHP 5.3/5.4
 #FROM phusion/baseimage:0.9.9
 
-FROM ubuntu:14.04
+FROM ubuntu:trusty-20190425
 
 ENV HOME /root
 
